@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class FeedAdapter : ArrayAdapter<Any> {
+class FeedAdapter<T : FeedEntry> : ArrayAdapter<Any> {
     private val layoutResource: Int
     private val layoutInflater: LayoutInflater
-    val feedEntries: MutableList<FeedEntry>
+    val feedEntries: MutableList<T>
 
-    constructor(context: Context, resource: Int, feedEntries: MutableList<FeedEntry>) : super(context, resource) {
+    constructor(context: Context, resource: Int, feedEntries: MutableList<T>) : super(context, resource) {
         this.layoutResource = resource
         this.layoutInflater = LayoutInflater.from(context)
         this.feedEntries = feedEntries

@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             feedUrl = savedInstanceState.getString("feedUrl")!!
             feedLimit = savedInstanceState.getInt("feedLimit")
         }
+
+        downloadUrl(String.format(feedUrl, feedLimit))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

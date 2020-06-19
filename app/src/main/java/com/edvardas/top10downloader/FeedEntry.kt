@@ -1,6 +1,6 @@
 package com.edvardas.top10downloader
 
-class FeedEntry {
+open class FeedEntry {
     var name: String? = null
     var artist: String? = null
     var releaseDate: String? = null
